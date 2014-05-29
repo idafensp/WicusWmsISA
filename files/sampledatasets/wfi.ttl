@@ -1,0 +1,600 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MCONCATFIT_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MPROJECTPP_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MPROJECTPP_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MSHRINK_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MBACKGROUND_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MBACKGROUND_SOFT_COMP> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000014_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MJPEG_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MADD_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MADD_CONF_INFO> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000024_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MADD_ID000033_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MADD_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MADD_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MADD_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mAdd"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000004_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MPROJECTPP_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MPROJECTPP_SOFT_STACK> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000020_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/PEGASUS_WMS_CENTOS_6_5_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/PEGASUS_WMS_CENTOS_6_5_CONF_INFO> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBGMODEL_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MIMGTBL_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MIMGTBL_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000030_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MSHRINK_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MSHRINK_SOFT_COMP> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MSHRINK_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MSHRINK_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBACKGROUND_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000011_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MBACKGROUND_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MBACKGROUND_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/PEGASUS_WMS_CENTOS_6_5_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/PEGASUS_WMS_CENTOS_6_5_SOFT_COMP> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MBACKGROUND_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBACKGROUND_CONF_INFO> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000001_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MBGMODEL_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MBGMODEL_SOFT_COMP> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MPROJECTPP_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000019_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MCONCATFIT_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MCONCATFIT_CONF_INFO> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000029_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MJPEG_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MJPEG_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBGMODEL_ID000023_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBGMODEL_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBGMODEL_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MBGMODEL_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MIMGTBL_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MIMGTBL_SOFT_COMP> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MDIFFFIT_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MDIFFFIT_CONF_INFO> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/PEGASUS_WMS_CENTOS_6_5_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MCONCATFIT_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MCONCATFIT_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MADD_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MADD_SOFT_COMP> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000016_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000010_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MSHRINK_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MSHRINK_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MIMGTBL_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MIMGTBL_CONF_INFO> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MPROJECTPP_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MPROJECTPP_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mProjectPP"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000026_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MIMGTBL_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MIMGTBL_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MDIFFFIT_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MDIFFFIT_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MSHRINK_ID000034_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MSHRINK_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MIMGTBL_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MIMGTBL_SOFT_REQ> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000006_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MBACKGROUND_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBACKGROUND_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000018_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MSHRINK_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MSHRINK_CONF_INFO> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MIMGTBL_ID000032_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MIMGTBL_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MCONCATFIT_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MCONCATFIT_SOFT_REQ> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000009_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MJPEG_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MJPEG_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mJPEG"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MCONCATFIT_ID000022_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MCONCATFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000013_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MJPEG_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MJPEG_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MPROJECTPP_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MPROJECTPP_CONF_INFO> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/PEGASUS_WMS_CENTOS_6_5_DEP_PLAN_CONF_PAR_3>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/PEGASUS_WMS_CENTOS_6_5_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-USER_NAME"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "wf"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MPROJECTPP_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MBGMODEL_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MBGMODEL_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MJPEG_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MJPEG_CONF_INFO> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000003_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MADD_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000015_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000025_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MBACKGROUND_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MDIFFFIT_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MDIFFFIT_SOFT_COMP> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000005_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/PEGASUS_WMS_CENTOS_6_5_DEP_PLAN_CONF_PAR_2>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/PEGASUS_WMS_CENTOS_6_5_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-PEGASUS_REPO_URL"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://download.pegasus.isi.edu/wms/download/rhel/6/x86_64"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MDIFFFIT_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MIMGTBL_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MIMGTBL_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mImgtbl"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000012_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MCONCATFIT_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MCONCATFIT_SOFT_COMP> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000028_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MSHRINK_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MSHRINK_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mShrink"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareComponent/MBGMODEL_SOFT_COMP>
+        a       <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+        <http://purl.org/net/wicus-stack#hasConfigurationInfo>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBGMODEL_CONF_INFO> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000008_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000002_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MADD_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MADD_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MDIFFFIT_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MDIFFFIT_SOFT_STACK> .
+
+<http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF>
+        a       <http://purl.org/net/wicus-reqs#ConcreteWorkflow> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MDIFFFIT_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MDIFFFIT_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MDIFFFIT_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mDiffFit"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MJPEG_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MJPEG_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/PEGASUS_WMS_CENTOS_6_5_DEP_PLAN_CONF_PAR_1>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/PEGASUS_WMS_CENTOS_6_5_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-PACKAGE_NAME"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "pegasus"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MBGMODEL_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBGMODEL_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MSHRINK_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MSHRINK_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MJPEG_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MJPEG_SOFT_COMP> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MCONCATFIT_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MCONCATFIT_SOFT_STACK> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000017_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MDIFFFIT_ID000021_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MJPEG_ID000035_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MJPEG_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MBGMODEL_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBGMODEL_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mBgModel"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000027_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MADD_DEST_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MADD_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-DEST_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "/opt/montage/Montage_v3.3_patched_4/bin/"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MBACKGROUND_ID000031_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> .
+
+<http://purl.org/net/wicus-reqs/resource/Workflow/montage_WF>
+        a       <http://purl.org/net/wicus-reqs#Workflow> ;
+        <http://purl.org/net/wicus-reqs#hasSubworkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MDIFFFIT_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MADD_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MIMGTBL_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MJPEG_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBGMODEL_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MSHRINK_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MBACKGROUND_CONC_WF> , <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MCONCATFIT_CONC_WF> ;
+        <http://purl.org/net/wicus-reqs#requires>
+                <http://purl.org/net/wicus-stack/resource/SoftwareRequirements/montage_WF_SOFT_REQ> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/montage_WF_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/PEGASUS_WMS_CENTOS_6_5_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareRequirements/MADD_SOFT_REQ>
+        a       <http://purl.org/net/wicus-reqs#SoftwareRequirements> ;
+        <http://purl.org/net/wicus#composedBySoftwareStack>
+                <http://purl.org/net/wicus-stack/resource/SoftwareStack/MADD_SOFT_STACK> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MBACKGROUND_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MBACKGROUND_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mBackground"^^xsd:string .
+
+<http://purl.org/net/wicus-reqs/resource/WorkflowStep/MPROJECTPP_ID000007_WF_STEP>
+        a       <http://purl.org/net/wicus-reqs#WorkflowStep> ;
+        <http://purl.org/net/wicus-reqs#isStepOfWorkflow>
+                <http://purl.org/net/wicus-reqs/resource/ConcreteWorkflow/MPROJECTPP_CONC_WF> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MIMGTBL_CONF_INFO>
+        a       <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+
+<http://purl.org/net/wicus-stack/resource/SoftwareStack/MPROJECTPP_SOFT_STACK>
+        a       <http://purl.org/net/wicus-stack#SoftwareStack> ;
+        <http://purl.org/net/wicus-stack#hasSoftwareComponent>
+                <http://purl.org/net/wicus-stack/resource/SoftwareComponent/MPROJECTPP_SOFT_COMP> .
+
+<http://purl.org/net/wicus-stack/resource/ConfigurationParameter/MCONCATFIT_SOURCE_DEP_PLAN_CONF_PAR>
+        a       <http://purl.org/net/wicus-stack#ConfigurationParameter> ;
+        <http://purl.org/net/wicus-stack#isConfigurationParameterOf>
+                <http://purl.org/net/wicus-stack/resource/ConfigurationInfo/MCONCATFIT_CONF_INFO> ;
+        <http://purl.org/net/wicus-stack#parameterName>
+                "-SOURCE_FILE_PATH"^^xsd:string ;
+        <http://purl.org/net/wicus-stack#parameterValue>
+                "http://delicias.dia.fi.upm.es/~isantana/montage/montagebins/mConcatFit"^^xsd:string .

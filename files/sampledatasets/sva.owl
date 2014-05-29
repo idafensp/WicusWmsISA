@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY wicus "http://purl.org/net/wicus#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY sva "http://purl.org/net/wicus-sva#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY wicus-reqs "http://purl.org/net/wicus-reqs#" >
+    <!ENTITY stack "http://purl.org/net/wicus-stack#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY wicus-hwspecs "http://purl.org/net/wicus-hwspecs#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY CPU "http://purl.org/net/wicus-hwspecs/resource/CPU/" >
+    <!ENTITY VMImage "http://purl.org/net/wicus-sva/resource/VMImage/" >
+    <!ENTITY Memory "http://purl.org/net/wicus-hwspecs/resource/Memory/" >
+    <!ENTITY Feature "http://purl.org/net/wicus-hwspecs/resource/Feature/" >
+    <!ENTITY Storage "http://purl.org/net/wicus-hwspecs/resource/Storage/" >
+    <!ENTITY ImageAppliance "http://purl.org/net/wicus-sva/resource/ImageAppliance/" >
+    <!ENTITY SoftwareStack "http://purl.org/net/wicus-stack/resource/SoftwareStack/" >
+    <!ENTITY HardwareSpec "http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/" >
+    <!ENTITY SoftwareComponent "http://purl.org/net/wicus-stack/resource/SoftwareComponent/" >
+    <!ENTITY InfrastructureProvider "http://purl.org/net/wicus-sva/resource/InfrastructureProvider/" >
+    <!ENTITY ScientificVirtualAppliance "http://purl.org/net/wicus-sva/resource/ScientificVirtualAppliance/" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/net/wicus#"
+     xml:base="http://purl.org/net/wicus"
+     xmlns:wicus-reqs="http://purl.org/net/wicus-reqs#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:CPU="http://purl.org/net/wicus-hwspecs/resource/CPU/"
+     xmlns:ImageAppliance="http://purl.org/net/wicus-sva/resource/ImageAppliance/"
+     xmlns:Feature="http://purl.org/net/wicus-hwspecs/resource/Feature/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Memory="http://purl.org/net/wicus-hwspecs/resource/Memory/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:SoftwareStack="http://purl.org/net/wicus-stack/resource/SoftwareStack/"
+     xmlns:VMImage="http://purl.org/net/wicus-sva/resource/VMImage/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sva="http://purl.org/net/wicus-sva#"
+     xmlns:wicus-hwspecs="http://purl.org/net/wicus-hwspecs#"
+     xmlns:SoftwareComponent="http://purl.org/net/wicus-stack/resource/SoftwareComponent/"
+     xmlns:HardwareSpec="http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ScientificVirtualAppliance="http://purl.org/net/wicus-sva/resource/ScientificVirtualAppliance/"
+     xmlns:Storage="http://purl.org/net/wicus-hwspecs/resource/Storage/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:stack="http://purl.org/net/wicus-stack#"
+     xmlns:InfrastructureProvider="http://purl.org/net/wicus-sva/resource/InfrastructureProvider/"
+     xmlns:wicus="http://purl.org/net/wicus#">
+    <owl:Ontology rdf:about="">
+        <terms:created rdf:datatype="&xsd;date">2013-06-14</terms:created>
+        <terms:modified rdf:datatype="&xsd;date">2013-07-08</terms:modified>
+        <terms:license rdf:datatype="&xsd;anyURI"
+            >http://creativecommons.org/licenses/by-nc-sa/2.0/</terms:license>
+        <dc:creator rdf:datatype="&xsd;anyURI"
+            >http://delicias.dia.fi.upm.es/~isantana/</dc:creator>
+        <vann:preferredNamespacePrefix>wicus</vann:preferredNamespacePrefix>
+        <dc:title
+            >The Workflow Infrastructure Conservation Using Semantics ontology</dc:title>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <vann:preferredNamespaceUri
+            >http://purl.org/net/wicus#</vann:preferredNamespaceUri>
+        <owl:imports rdf:resource="http://purl.org/net/wicus-hwspecs"/>
+        <owl:imports rdf:resource="http://purl.org/net/wicus-reqs"/>
+        <owl:imports rdf:resource="http://purl.org/net/wicus-stack"/>
+        <owl:imports rdf:resource="http://purl.org/net/wicus-sva"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&terms;modified"/>
+    <owl:AnnotationProperty rdf:about="&terms;created"/>
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix"/>
+    <owl:AnnotationProperty rdf:about="&terms;license"/>
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wicus#hasHardwareSpecs -->
+
+    <owl:ObjectProperty rdf:about="#hasHardwareSpecs"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-hwspecs#hasFeature"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#hasHardwareComponent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-hwspecs#hasHardwareComponent"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-stack#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-stack#dependsOn"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-stack#hasSoftwareComponent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-stack#hasSoftwareComponent"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#hasVMImage -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-sva#hasVMImage"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#isSupportedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-sva#isSupportedBy"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#providedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/wicus-sva#providedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#unit -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/wicus-hwspecs#unit"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#value -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/wicus-hwspecs#value"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-stack#versionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/wicus-stack#versionNumber"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#vmId -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/wicus-sva#vmId"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#CPU -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-hwspecs#CPU"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#Feature -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-hwspecs#Feature"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#HardwareSpec -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-hwspecs#HardwareSpec"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#Memory -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-hwspecs#Memory"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs#Storage -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-hwspecs#Storage"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-stack#SoftwareComponent -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-stack#SoftwareComponent"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-stack#SoftwareStack -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-stack#SoftwareStack"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#ImageAppliance -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-sva#ImageAppliance"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#InfrastructureProvider -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-sva#InfrastructureProvider"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#ScientificVirtualAppliance -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-sva#ScientificVirtualAppliance"/>
+    
+
+
+    <!-- http://purl.org/net/wicus-sva#VMImage -->
+
+    <owl:Class rdf:about="http://purl.org/net/wicus-sva#VMImage"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_64b_CPU -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_64b_CPU">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#CPU"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_64b_CPU_arch"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_CPU -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_CPU">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#CPU"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_64b_CPU_arch -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_64b_CPU_arch">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Feature"/>
+        <wicus-hwspecs:value>64</wicus-hwspecs:value>
+        <wicus-hwspecs:unit>bit</wicus-hwspecs:unit>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_arch -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_arch">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:unit>bit</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>32</wicus-hwspecs:value>
+    </wicus-hwspecs:Feature>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:value>2.4</wicus-hwspecs:value>
+        <wicus-hwspecs:unit>GHz</wicus-hwspecs:unit>
+    </wicus-hwspecs:Feature>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_RAM_size -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_RAM_size">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:unit>MB</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>613</wicus-hwspecs:value>
+    </wicus-hwspecs:Feature>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_STORAGE_size -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_STORAGE_size">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Feature"/>
+        <wicus-hwspecs:unit>GB</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>6.9</wicus-hwspecs:value>
+    </owl:Thing>
+    
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Memory/AWS_t1_micro_RAM -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Memory/AWS_t1_micro_RAM">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Memory"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_RAM_size"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Storage/AWS_t1_micro_STORAGE -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Storage/AWS_t1_micro_STORAGE">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Storage"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_STORAGE_size"/>
+    </owl:Thing>
+
+    
+    
+
+
+    <!-- http://purl.org/net/wicus-sva/resource/InfrastructureProvider/AmazonWebServices_CLOUD_PROV -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-sva/resource/InfrastructureProvider/AmazonWebServices_CLOUD_PROV">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-sva#InfrastructureProvider"/>
+    </owl:Thing>
+    
+    
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/CentOS_6_5_m1_large_HW_SPECS -->
+
+    <wicus-hwspecs:HardwareSpec rdf:about="http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/CentOS_6_5_m1_large_HW_SPECS">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:hasHardwareComponent rdf:resource="http://purl.org/net/wicus-hwspecs/resource/CPU/FG_m1_large_CPU"/>
+        <wicus-hwspecs:hasHardwareComponent rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Memory/FG_m1_large_RAM"/>
+        <wicus-hwspecs:hasHardwareComponent rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Storage/FG_m1_large_STORAGE"/>
+    </wicus-hwspecs:HardwareSpec>
+    
+        <!-- http://purl.org/net/wicus-sva/resource/ImageAppliance/CentOS_6_5_m1_large_ImgApp -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-sva/resource/ImageAppliance/CentOS_6_5_m1_large_ImgApp">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-sva#ImageAppliance"/>
+        <hasHardwareSpecs rdf:resource="http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/CentOS_6_5_m1_large_HW_SPECS"/>
+        <sva:hasVMImage rdf:resource="http://purl.org/net/wicus-sva/resource/VMImage/CentOS_6_5_VMImage"/>
+        <sva:providedBy rdf:resource="http://purl.org/net/wicus-sva/resource/InfrastructureProvider/FutureGrid_CLOUD_PROV"/>
+    </owl:Thing>
+    
+    
+        <!-- http://purl.org/net/wicus-sva/resource/InfrastructureProvider/FutureGrid_CLOUD_PROV -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-sva/resource/InfrastructureProvider/FutureGrid_CLOUD_PROV">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-sva#InfrastructureProvider"/>
+    </owl:Thing>
+    
+    
+        <!-- http://purl.org/net/wicus-sva/resource/ScientificVirtualAppliance/CentOS_6_5_SVA -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-sva/resource/ScientificVirtualAppliance/CentOS_6_5_SVA">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-sva#ScientificVirtualAppliance"/>
+        <wicus:hasSoftwareStack rdf:resource="http://purl.org/net/wicus-stack/resource/SoftwareStack/CENTOS_6_5_OS_SOFT_STACK"/>
+        <sva:isSupportedBy rdf:resource="http://purl.org/net/wicus-sva/resource/ImageAppliance/CentOS_6_5_m1_large_ImgApp"/>
+        <sva:isSupportedBy rdf:resource="http://purl.org/net/wicus-sva/resource/ImageAppliance/CentOS_6_5_AWS_t1_micro_ImgApp"/>
+    </owl:Thing>
+    
+    <!-- http://purl.org/net/wicus-stack/resource/SoftwareStack/CENTOS_6_5_OS_SOFT_STACK -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-stack/resource/SoftwareStack/CENTOS_6_5_OS_SOFT_STACK">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-stack#SoftwareStack"/>
+        <stack:hasSoftwareComponent rdf:resource="http://purl.org/net/wicus-stack/resource/SoftwareComponent/CENTOS_6_5_OS_SWC"/>
+    </owl:Thing>
+    
+        <!-- http://purl.org/net/wicus-stack/resource/SoftwareComponent/CENTOS_6_5_OS_SWC -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-stack/resource/SoftwareComponent/CENTOS_6_5_OS_SWC">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-stack#SoftwareComponent"/>
+        <stack:versionNumber>6.5</stack:versionNumber>
+    </owl:Thing>
+    
+        <!--XX http://purl.org/net/wicus-sva/resource/VMImage/CentOS_6_5_VMImage -->
+
+    <sva:VMImage rdf:about="http://purl.org/net/wicus-sva/resource/VMImage/CentOS_6_5_VMImage">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <sva:vmId>ami-00000081</sva:vmId>
+    </sva:VMImage>
+    
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/CPU/FG_m1_large_CPU -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/CPU/FG_m1_large_CPU">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#CPU"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_CPU_freq"/>
+    </owl:Thing>
+    
+        <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_CPU_freq -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_CPU_freq">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:value>2.9</wicus-hwspecs:value>
+        <wicus-hwspecs:unit>GHz</wicus-hwspecs:unit>
+    </wicus-hwspecs:Feature>
+    
+    
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Memory/FG_m1_large_RAM -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Memory/FG_m1_large_RAM">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Memory"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_RAM_size"/>
+    </owl:Thing>
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_RAM_size -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_RAM_size">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:unit>GB</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>8</wicus-hwspecs:value>
+    </wicus-hwspecs:Feature>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Storage/FG_m1_large_STORAGE -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Storage/FG_m1_large_STORAGE">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Storage"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_STORAGE_size"/>
+    </owl:Thing>
+    
+    
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_STORAGE_size -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/FG_m1_large_STORAGE_size">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Feature"/>
+        <wicus-hwspecs:unit>GB</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>15</wicus-hwspecs:value>
+    </owl:Thing>
+    
+    <!-- ADDED 20140514 -->
+       <!-- http://purl.org/net/wicus-sva/resource/ImageAppliance/CentOS_6_5_AWS_t1_micro_ImgApp -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-sva/resource/ImageAppliance/CentOS_6_5_AWS_t1_micro_ImgApp">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-sva#ImageAppliance"/>
+        <hasHardwareSpecs rdf:resource="http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/CentOS_6_5_AWS_t1_micro_HW_SPECS"/>
+        <sva:hasVMImage rdf:resource="http://purl.org/net/wicus-sva/resource/VMImage/CentOS_6_5_AWS_VMImage"/>
+        <sva:providedBy rdf:resource="http://purl.org/net/wicus-sva/resource/InfrastructureProvider/AmazonWebServices_CLOUD_PROV"/>
+    </owl:Thing>
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/CentOS_6_5_AWS_t1_micro_HW_SPECS -->
+
+    <wicus-hwspecs:HardwareSpec rdf:about="http://purl.org/net/wicus-hwspecs/resource/HardwareSpec/CentOS_6_5_AWS_t1_micro_HW_SPECS">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:hasHardwareComponent rdf:resource="http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_CPU"/>
+        <wicus-hwspecs:hasHardwareComponent rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Memory/AWS_t1_micro_RAM"/>
+        <wicus-hwspecs:hasHardwareComponent rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Storage/AWS_t1_micro_STORAGE"/>
+    </wicus-hwspecs:HardwareSpec>
+    
+            <!--XX http://purl.org/net/wicus-sva/resource/VMImage/CentOS_6_5_AWS_VMImage -->
+
+    <sva:VMImage rdf:about="http://purl.org/net/wicus-sva/resource/VMImage/CentOS_6_5_AWS_VMImage">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <sva:vmId>ami-78d83a10</sva:vmId>
+    </sva:VMImage>
+    
+        
+    <!-- http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_CPU -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/CPU/AWS_t1_micro_CPU">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#CPU"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq"/>
+    </owl:Thing>
+    
+        <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_CPU_freq">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:value>2.4</wicus-hwspecs:value>
+        <wicus-hwspecs:unit>GHz</wicus-hwspecs:unit>
+    </wicus-hwspecs:Feature>
+    
+    
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Memory/AWS_t1_micro_RAM -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Memory/AWS_t1_micro_RAM">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Memory"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_RAM_size"/>
+    </owl:Thing>
+    
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_RAM_size -->
+
+    <wicus-hwspecs:Feature rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_RAM_size">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <wicus-hwspecs:unit>MB</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>693</wicus-hwspecs:value>
+    </wicus-hwspecs:Feature>
+    
+
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Storage/AWS_t1_micro_STORAGE -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Storage/AWS_t1_micro_STORAGE">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Storage"/>
+        <wicus-hwspecs:hasFeature rdf:resource="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_STORAGE_size"/>
+    </owl:Thing>
+    
+    
+
+    <!-- http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_STORAGE_size -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wicus-hwspecs/resource/Feature/AWS_t1_micro_STORAGE_size">
+        <rdf:type rdf:resource="http://purl.org/net/wicus-hwspecs#Feature"/>
+        <wicus-hwspecs:unit>GB</wicus-hwspecs:unit>
+        <wicus-hwspecs:value>5</wicus-hwspecs:value>
+    </owl:Thing>
+    
+    
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

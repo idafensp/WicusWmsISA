@@ -1,0 +1,2 @@
+#http://purl.org/net/wicus-sva/resource/InfrastructureProvider/FutureGrid_CLOUD_PROV#FutureGrid
+http://purl.org/net/wicus-sva/resource/InfrastructureProvider/AmazonWebServices_CLOUD_PROV#AWS
