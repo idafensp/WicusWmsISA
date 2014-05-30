@@ -1,0 +1,5 @@
+WF_URI=http://purl.org/net/wicus-reqs/resource/Workflow/montage_WF;
+WFI_DATASET_PATH=file:/Users/isantana/Dropbox/DOCTORADO/STAY@ISI/MontageCondorPegasus/RO/wfiConf.ttl;
+SWC_DATASET_PATH=file:/Users/isantana/Dropbox/DOCTORADO/STAY@ISI/MontageCondorPegasus/RO/swc.ttl;
+SVA_DATASET_PATH=file:/Users/isantana/Dropbox/DOCTORADO/STAY@ISI/MontageCondorPegasus/RO/sva.owl;
+CLOUD_PROV_FILE=files/cloudproviders.txt;
